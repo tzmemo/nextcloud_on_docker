@@ -12,12 +12,12 @@ Onlyoffice, Collabora and Talk work only on a x86_64 server.
 
 Install [Ansible](https://www.ansible.com/) and some needed tools by running the following command with a user that can sudo or is root. 
 ```bash
-curl -s https://raw.githubusercontent.com/ReinerNippes/nextcloud_on_docker/master/prepare_system.sh | /bin/bash
+curl -s https://raw.githubusercontent.com/tzmemo/nextcloud_on_docker/master/prepare_system.sh | /bin/bash
 ```
 
 Clone this repo and change into the directory nextcloud_on_docker.
 ```bash
-git clone https://github.com/ReinerNippes/nextcloud_on_docker
+git clone https://github.com/tzmemo/nextcloud_on_docker
 
 cd nextcloud_on_docker
 ```
