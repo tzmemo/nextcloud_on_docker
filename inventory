@@ -6,10 +6,10 @@ localhost ansible_connection=local
 ### Preliminary variables ###
 
 # The domain name for your Nextcloud instance. You'll get a Let's Encrypt certificate for this domain.
-nextcloud_server_fqdn       = nextcloud.example.tld
+nextcloud_server_fqdn       = nx.thzantis.de
 
 # Your email address (for Let's Encrypt).
-ssl_cert_email              = nextcloud@example.tld
+ssl_cert_email              = certbot@mail.thzantis.de
 
 ### Nextcloud variables ###
 
@@ -17,7 +17,7 @@ ssl_cert_email              = nextcloud@example.tld
 nextcloud_base_dir          = /opt/nextcloud
 
 # Choose a username and password for your Nextcloud admin user.
-nextcloud_admin             = 'admin'
+nextcloud_admin             = 'tz'
 nextcloud_passwd            = ''              # If empty the playbook will generate a random password.
 
 # You must choose one database management system.
@@ -65,19 +65,19 @@ backup_hour                 = 4
 backup_minute               = 0
 
 # Choose an online office suite to integrate with your Nextcloud. Your options are (without quotation marks): 'none', 'collabora' and 'onlyoffice'.
-online_office               = none
+online_office               = collabora
 # When using Collabora, you're able to install dictionaries alongside with it. Collabora's default is German (de).
-collabora_dictionaries      = 'en'            # Separate ISO 639-1 codes with a space.
+collabora_dictionaries      = 'en de'            # Separate ISO 639-1 codes with a space.
 
 # Set to true to install TURN server for Nextcloud Talk.
-talk_install                = false
+talk_install                = true
 
 # Set to true to enable access to your database with Adminer at https://nextcloud_server_fqdn/adminer . The password will be stored in {{ nextcloud_base_dir }}/secrets .
-adminer_enabled             = false
+adminer_enabled             = true
 
 # Set to true to install Portainer webgui for Docker.
-portainer_enabled           = false
+portainer_enabled           = true
 portainer_passwd            = ''              # If empty the playbook will generate a random password.
 
 # Uncomment 'traefik_api_user' to get access to your Traefik dashboard at https://nextcloud_server_fqdn/traefik .
-# traefik_api_user          = traefik
+traefik_api_user          = traefik
